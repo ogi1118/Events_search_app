@@ -1,0 +1,68 @@
+<!--*******************************************************************
+*** File Name : VoteEvent.html
+*** Version : V1.0
+*** Designer : 相内 優真
+*** Date : 2024.07.06
+*** Purpose : W6 行き先投票画面を表示する(イベント)
+***
+*******************************************************************-->
+
+<!--*** Revision :
+*** V1.0 : 相内 優真, 2024.6.10
+-->
+
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>行き先投票</title>
+        <!--外部のCSSファイルを読み込み-->
+        <link rel="stylesheet" href="/Nine2/pageStyle.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1>イベント投票画面</h1>
+        </div>
+        <div class="container">
+            <div class="flex-container">
+                <div class="flex-item">
+                    <p>希望の条件を入力してください</p>
+                    <FORM method="GET" action="/Nine2/servlet/vote/">
+                        <input type="hidden" name="ISEVENT" value="1" />
+                        <!--ジャンルのセレクトボックスを追加-->
+                        <div>
+                            ジャンル
+                            <select name="GENRE">
+                                <option value="スポーツ">スポーツ</option>
+                                <option value="グルメ">グルメ</option>
+                                <option value="フリーマーケット">フリーマーケット</option>
+                                <option value="お祭り">お祭り</option>
+                                <option value="ライブ,音楽イベント">ライブ,音楽イベント</option>
+                                <option value="舞台,演劇">舞台,演劇</option>
+                                <option value="展示会">展示会</option>
+                                <option value="花火">花火</option>
+                                <option value="花見">花見</option>
+                                <option value="紅葉">紅葉</option>
+                                <option value="プール">プール</option>
+                                <option value="アニメ,ゲーム">アニメ,ゲーム</option>
+                                <option value="物産展,観光フェア">物産展,観光フェア</option>
+                            </select>
+                        </div>
+                    
+                        <br>
+
+                        <!--投票ボタンの追加-->
+                        <button type="submit">投票</button>
+                    </FORM>
+                    <button id="backButton">ホームに戻る</button>
+                </div>
+            </div>
+        </div>
+        <!--ホームに戻る処理-->
+        <script>
+            document.getElementById('backButton').addEventListener('click', function () {
+                window.location.href = '/Nine2/Home.html';
+            });
+        </script>        
+    </body>
+</html>

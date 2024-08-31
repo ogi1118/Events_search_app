@@ -1,0 +1,35 @@
+<!--*******************************************************************
+*** File Name : busyDaySelect.html
+*** Version : V1.0
+*** Designer : 村田 悠真
+*** Date : 2024/07/16
+*** Purpose : W2 カレンダー情報入力画面
+***
+*******************************************************************-->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>予定選択</title>
+	<link rel="stylesheet" href="./pageStyle.css">
+	<script src="/Nine2/sendCalendarInfo.js"></script>
+</head>
+
+<body>
+	<div class="header">
+		<h1>予定入力画面</h1>
+	</div>
+	<div class="container">
+		<div class="flex-container">
+		  	<div class="flex-item">
+				<h2>予定がある日を選択してください</h2>
+				<div id="checkbox-container" class="checkbox-container"></div>
+				<button onclick="getCalendarInfo();">決定</button>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

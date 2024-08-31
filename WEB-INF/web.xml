@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>LoginServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>NickName</servlet-name>
+    <servlet-class>NickNameServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>MyServlet</servlet-name>
+    <servlet-class>MyServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>Calendar</servlet-name>
+    <servlet-class>CalendarServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>Vote</servlet-name>
+    <servlet-class>VoteServlet</servlet-class>
+  </servlet>  
+
+  <servlet>
+    <servlet-name>Display</servlet-name>
+    <servlet-class>ServletForDisplay</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>Result</servlet-name>
+    <servlet-class>ServletForResult</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>Save</servlet-name>
+    <servlet-class>ServletForSave</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>BackHome</servlet-name>
+    <servlet-class>ServletForBackHome</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/servlet/LoginServlet/</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>NickName</servlet-name>
+    <url-pattern>/servlet/NickNameServlet/</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>MyServlet</servlet-name>
+    <url-pattern>/api/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Calendar</servlet-name>
+    <url-pattern>/servlet/CalendarServlet/</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Vote</servlet-name>
+    <url-pattern>/servlet/vote/</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Display</servlet-name>
+    <url-pattern>/servlet/ServletForDisplay/</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Result</servlet-name>
+    <url-pattern>/servlet/ServletForResult/</url-pattern>
+  </servlet-mapping>
+
+   <servlet-mapping>
+    <servlet-name>Save</servlet-name>
+    <url-pattern>/servlet/ServletForSave/</url-pattern>
+  </servlet-mapping>
+
+   <servlet-mapping>
+    <servlet-name>BackHome</servlet-name>
+    <url-pattern>/servlet/ServletForBackHome/</url-pattern>
+  </servlet-mapping>
+</web-app>

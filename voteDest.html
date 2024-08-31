@@ -1,0 +1,99 @@
+<!--*******************************************************************
+*** File Name : VoteDest.html
+*** Version : V1.1
+*** Designer : 相内 優真
+*** Date : 2024.6.10
+*** Purpose : W6 行き先投票画面を表示する
+***
+*******************************************************************-->
+
+<!--*** Revision :
+*** V1.0 : 相内 優真, 2024.6.10
+*** V1.1 : 相内 優真, 2024.6.16 投票ボタンが押されたときの処理を追加-->
+
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>行き先投票</title>
+    <!--外部のCSSファイルを読み込み-->
+    <link rel="stylesheet" href="./pageStyle.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>行き先投票画面</h1>
+    </div>
+    <div class="container">
+        <div class="flex-container">
+            <div class="flex-item">
+                <p>希望の条件を入力してください</p>
+                <FORM method="GET" action="/Nine2/servlet/vote/">
+                    <!--ジャンルのセレクトボックスを追加-->
+                    <div>
+                        ジャンル
+                        <select name="GENRE">
+                            <option value="ラーメン">ラーメン</option>
+                            <option value="カレー">カレー</option>
+                            <option value="蕎麦">蕎麦</option>
+                            <option value="水族館">水族館</option>
+                        </select>
+                    </div>
+
+                    <br>
+
+                    <!--予算の入力欄を追加-->
+                    <div>
+                        予算<br>
+                        ※予算は0~4の指標に変換して検索します(0:無料  1:〜1,000円未満  2:1,000円〜3,000円  3:3,000円〜5,000円  4:5,000円以上)<br>
+                        <input type="number" id="budget1" name="BUDGET1" min="0" max="100000000" step="1" required>
+                        円 ～
+                        <input type="number" id="budget2" name="BUDGET2" min="0" max="100000000" step="1" required>
+                        円
+                    </div>
+
+                    <br>
+
+                    <!--レビュー評価のセレクトボックスを追加-->
+                    <div>
+                        レビュー評価
+                        <select name="REVIEW">
+                            <option value="3.5">星3.5以上</option>
+                            <option value="4.0">星4.0以上</option>
+                            <option value="4.5">星4.5以上</option>
+                        </select>
+                    </div>
+
+                    <br>
+                    <input type="hidden" name="ISEVENT" value="0" />
+                    <!--投票ボタンの追加-->
+                    <button type="submit">投票</button>
+                </FORM>
+                <button id="backButton">ホームに戻る</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        //ホームに戻る処理
+        document.getElementById('backButton').addEventListener('click', function () {
+            window.location.href = '/Nine2/Home.html';
+        });
+        const input1 = document.getElementById('budget1');
+        input1.addEventListener('input', function () {
+            // 小数点を含む場合は削除する
+            if (/\./.test(this.value)) {
+                this.value = this.value.replace(/\./g, '');
+            }
+        });
+        const input2 = document.getElementById('budget2');
+        input2.addEventListener('input', function () {
+            // 小数点を含む場合は削除する
+            if (/\./.test(this.value)) {
+                this.value = this.value.replace(/\./g, '');
+            }
+        });
+    </script>
+</body>
+
+</html>

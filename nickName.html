@@ -1,0 +1,36 @@
+<!--*******************************************************************
+*** File Name : nickName.html
+*** Version : V1.0
+*** Designer : 村田 悠真
+*** Date : 2024/07/06
+*** Purpose : W3 ニックネーム入力画面
+***
+*******************************************************************-->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ニックネーム</title>
+  <script src="sendNickName.js"></script>
+  <link rel="stylesheet" href="./pageStyle.css">
+</head>
+
+<body>
+  <div class="header">
+		<h1>ニックネーム入力画面</h1>
+	</div>
+  <div class="container">
+    <div class="flex-container">
+      <div class="flex-item">
+        <h1>ニックネーム</h1>
+        <div id="errorMessage"></div>
+        <input type="text" id="nickName" name="nickName" required>
+        <button onclick="sendNickName();">決定</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
